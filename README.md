@@ -1,5 +1,6 @@
 # Group-Project
 Group project in coding Bootcamp
+
 REQUIREMENTS:
 
 1. The application you need to build is a web app that gives the ability to users to register and login 
@@ -22,3 +23,4 @@ b. REST API
 7. The application must support an e-payment process that:
 a. Givesaccesstoreadsomerestrictedmateriale.g.e-bookor 
 b. Buysomegoods,e.g.purchaseadigitalobject
+
