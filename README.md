@@ -2,18 +2,22 @@
 Group project in coding Bootcamp
 Group project in coding Bootcamp
 
-REQUIREMENTS:
+APPLICATION REQUIREMENTS:
 
-The application you need to build is a web app that gives the ability to users to register and login
+1.Gives the ability to users to register and login
 
-Your web application needs to be able to connect with a database either locally or remotely
+2. Able to connect with a database either locally or remotely.
 
-Yourapplicationmustimplementatleasttworoles
+3. Implements roles.
 
-Each role must have different tasks and views within the application
+4. Each role has different tasks and views within the application
 
-The application must have the option to produce reporting views with (custom) filters
+5. There is option to produce reporting views with (custom) filters.
 
-The application must have a module that permits internal communication between internal entities which could be (implement at least one of the following): a. Realtimecommunicationand/or b. REST API
+6. There is a module that permits internal communication between internal entities which could be (implement at least one of the following): a. Realtimecommunicationand.
 
-The application must support an e-payment process that: a. Givesaccesstoreadsomerestrictedmateriale.g.e-bookor b. Buysomegoods,e.g.purchaseadigitalobject
+7. REST API 
+
+8. Support an e-payment process that: 
+a. Gives access to read some restricted material e.g.e-bookor 
+b. Buysomegoods,e.g.purchaseadigitalobject
