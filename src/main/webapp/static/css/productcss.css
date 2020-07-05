@@ -1,0 +1,353 @@
+#cartSize {
+    padding: 0 !important;
+    max-width: 310px;
+
+}
+.fixed-top{
+    left: 5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.categories {
+
+    background-color: #7cc2af;
+    width: 15%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    flex: 1;
+    font-size: 16px;
+    border-radius: 3%;
+    border: 0.2px solid black;
+}
+
+.addToCartButton {
+    /* background-color: aqua; */
+    flex: 1;
+    /* border: 5px; */
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 25%;
+}
+
+.navig {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #7cc2af;
+    text-shadow: aquamarine;  
+    font-weight: 600;
+}
+
+.categories a {
+    text-decoration: none;
+    flex: 1;
+    color: white;
+    padding: 10px;
+
+}
+
+.categories div a:hover {
+    opacity: 1;
+    border-radius: 10%;
+    background-color: #edac7f;
+}
+
+
+
+.navig div {
+    display: flex;
+    margin: 1% 1%;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.navig div:hover {
+    opacity: 1;
+    border-radius: 10%;
+    background-color: #edac7f;
+}
+
+.mainContent {
+    background-color: orangered;
+    flex: 1;
+}
+
+.listOfProducts {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    justify-self: center;
+    height: 50%;
+    flex: 4;
+    flex-wrap: wrap;
+}
+p.price {
+    margin: auto;
+    font-weight: 700;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    border: 1px solid gainsboro;
+    justify-content: center;
+    flex-basis: 23%;
+    margin: 3px 3px;
+    border-radius: 5px;
+
+}
+
+.product p {
+    font-size: 16pt;
+    font-weight: 600;
+}
+.product img {
+    /* height: 150px;
+    width: 200px; */
+    margin: auto;
+    /* cursor: pointer; */
+}
+
+.titleOfProduct {
+    font-size: 14pt;
+    font-weight: 700;
+}
+
+
+
+.basketList {
+    margin-top: 20px;
+    text-decoration: underline;
+    display: flex;
+    height: 80px;
+}
+
+.itemName,
+.price,
+.quantity {
+    flex: 1;
+    text-align: center;
+    font-size: 20pt;
+    display: flex;
+    flex-direction: column;
+}
+
+.price input {
+    flex: 1;
+    justify-content: center;
+    font-size: 16pt;
+    align-items: center;
+    text-align: center;
+}
+
+.purchaseButton {
+    margin: auto;
+    padding: 3%;
+    border-radius: 20%;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.footerProduct {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selectQuantity {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+}
+
+.selectQuantity input {
+    height: 25px;
+    width: 40px;
+    align-content: center;
+}
+.plusMinusButtons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.plusButton,
+.minusButton {
+    padding: 2px 10px;
+    margin: 0 4px;
+    border: 1px groove black;
+    align-self: center;
+}
+
+.footerProduct input {
+    margin: 5px;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+}
+
+.priceCurrency {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 450px) {
+    .listOfProducts {
+        flex: 3;
+        flex-direction: column;
+    }
+
+    .product {
+        flex: 1;
+        width: 25%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .listOfProducts {
+        flex: 4;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        display: flex;
+        margin: auto;
+        flex-basis: 50%;
+        width: 25%;
+    }
+}
+/* ***** */
+@media screen and (max-width: 850px) {
+    .navig {
+        display: none;
+    }
+
+    #toggleMenu {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 15px;
+        margin: 5px 0;
+        background-color: #f8f9fa;
+    }
+}
+@media screen and (min-width: 850px) {
+    #toggleMenu {
+        display: none;
+    }
+    #cartSize {
+        margin: 0;
+        padding: 0;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    div.product {
+        margin-bottom: 10px;
+        border: 1px solid gainsboro;
+        width: 50%;
+    }
+    h4.descriptionOfProduct {
+        text-align: center;
+        font-style: italic;
+    }
+    h3.titleOfProduct {
+        font-size: 14px;
+    }
+    p.measurementOfProduct {
+        font-size: 14px;
+    }
+    div.priceCurrency {
+        font-size: 14px;
+    }
+    p.price {
+        font-size: 14px;
+        margin: auto;
+    }
+    button.btn.btn-primary {
+        padding: 3px;
+    }
+    button.btn.btn-danger {
+        padding: 3px;
+    }
+    #cartSize {
+        margin: 0;
+        padding: 0;
+        width: 50%;
+    }
+    .listOfProducts {
+        flex: 2;
+        flex-direction: column;
+    }
+
+    .product {
+        flex: 1;
+        display: flex;
+        margin: auto;
+
+        width: 25%;
+        font-size: 10px;
+    }
+    .addToCartButton {
+        font-size: 10px;
+    }
+    #togleMenu {
+        display: unset;
+    }
+
+}
+
+.circleC:before {
+    content: " \25CF";
+    font-size: 10px;
+}
+.circleC {
+    color: green;
+}
+
+.no:before {
+    /* TESTING */
+    content: " \25CF";
+    font-size: 10px;
+}
+.no {
+    color: white;
+}
+.priceCurrency {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+.priceCurrency span {
+    margin: auto;
+}
+.measurementOfProduct {
+    margin: auto;
+}
+p.measurementOfProduct {
+    font-size: 14pt;
+    font-weight: 500;
+}
+
+a {
+    color: black;
+    font-weight: 300;
+}

@@ -1,0 +1,62 @@
+body {
+	height: 100%;
+	background-color:rgb(245, 245, 245);
+        background-image: url("../img/marketbackadmin.jpg");
+}
+
+body, .form-control{
+	font-size:10px!important;
+}
+
+.has-error{
+	color:red;
+}
+
+.generic-container {
+  position: fixed;
+  width:80%;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #EAE7E7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.custom-width {
+    width: 80px !important;
+}
+#error
+{
+    color: red;
+}
+
+#thead{
+    font-size: 15px;
+    
+}
+
+#thead th{
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+
+.panel-heading{
+    text-align: center;
+}
+
+.table{
+    font-size: 15px;
+}
+
+#form{
+    font-size: 15px;
+}
+
+.panel-default{
+   width: 75%; 
+   margin: auto;
+   margin-bottom: 40px;
+}
