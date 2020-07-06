@@ -6,8 +6,11 @@ function loadProducts() {
         }
     }
     var xhr = new XMLHttpRequest();
+    // window.location.origin --> e.g. http://localhost:8084
+var dnsUrl = String(window.location.origin +"/ProductBoot/productrest/")
+    xhr.open("GET", dnsUrl, true);
 
-    xhr.open("GET", "http://localhost:8084/ProductBoot/productrest/", true);
+
 
     xhr.onload = function () {
         if (this.status == 200) {
@@ -35,7 +38,7 @@ function loadProducts() {
 
 function createEachDOMProduct(product) {
     var productCreated = document.createElement("div");
-    console.log(product);
+    
     productCreated.className = "product";
     var measurementType =
             product.categoryId.categoryName == "Meat" ||
@@ -147,7 +150,8 @@ function filterBy(filterType) {
         }
     }
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:8084/ProductBoot/productrest/", true);
+var dnsUrl = String(window.location.origin +"/ProductBoot/productrest/")
+    xhr.open("GET", dnsUrl, true);
     xhr.onload = function () {
         if (this.status == 200) {
             var productsJSON = JSON.parse(xhr.responseText);
@@ -182,7 +186,7 @@ function attachEventListenerToButtons() {
 
     for (let minusButton of minusButtons) {
         minusButton.addEventListener("click", function (event) {
-            console.log("- 1");
+           
             var initialQuantity = parseInt(
                     event.target.nextSibling.firstChild.value
                     );
@@ -193,7 +197,7 @@ function attachEventListenerToButtons() {
     }
     for (let plusButton of plusButtons) {
         plusButton.addEventListener("click", function () {
-            console.log("+ 1");
+           
             var initialQuantity = parseInt(
                     event.target.previousSibling.firstChild.value
                     );
