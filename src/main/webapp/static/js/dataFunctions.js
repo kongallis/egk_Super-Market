@@ -7,7 +7,7 @@ function loadProducts() {
     }
     var xhr = new XMLHttpRequest();
     // window.location.origin --> e.g. http://localhost:8084
-var dnsUrl = String(window.location.origin +"/ProductBoot/productrest/")
+var dnsUrl = String(window.location.origin +"/productrest/")
     xhr.open("GET", dnsUrl, true);
 
 
@@ -150,7 +150,7 @@ function filterBy(filterType) {
         }
     }
     var xhr = new XMLHttpRequest();
-var dnsUrl = String(window.location.origin +"/ProductBoot/productrest/")
+var dnsUrl = String(window.location.origin +"/productrest/")
     xhr.open("GET", dnsUrl, true);
     xhr.onload = function () {
         if (this.status == 200) {
