@@ -48,7 +48,7 @@ function createEachDOMProduct(product) {
             : "ml";
     var greenB = product.bio == true ? "circleC" : "no";
 
-    var restOf = `<img class="img-fluid" src="/ProductBoot/static/img/${product.image}"/>
+    var restOf = `<img class="img-fluid" src="/static/img/${product.image}"/>
  
   <h3 class="titleOfProduct">"${product.name}</h3>
  
