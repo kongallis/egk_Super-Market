@@ -29,7 +29,7 @@
                 margin : auto;
             }
             .jumbotron {
-                background-image: url("http://localhost:8084/ProductBoot/static/img/manabiko.jpg");
+/*                background-image: url("http://localhost:8084/ProductBoot/static/img/manabiko.jpg");*/
                 background-size: cover;
                 color: aliceblue;
                 height: 400px;
@@ -97,6 +97,11 @@
             <p class="who"><strong>John Kenneth Galbraith</strong></p>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            
+var dnsUrl = String(window.location.origin +"/static/img/manabiko.jpg")
+            $(".jumbotron").css("background-image", "url(" + dnsUrl + ")");
+            </script>
         <jsp:include page="footer.jsp" />
     </body>
 </html>
