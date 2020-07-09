@@ -8,6 +8,11 @@
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+body {
     display: flex;
     flex-direction: column;
 }
@@ -16,21 +21,30 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    /* margin-top: .5rem; */
 }
 
 .categories {
 
-    background-color: #7cc2af;
-    width: 15%;
+    /* background-color: #7cc2af; */
+    /* width: 15%; */
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    flex: 1;
+    /* flex: 1; */
+    flex: 0 0 10%;
     font-size: 16px;
     border-radius: 3%;
-    border: 0.2px solid black;
+    /* border: 0.2px solid black; */
+}
+
+.categories div {
+    padding: .8rem;
+    transition: all .2s;
+    cursor: pointer;
+    text-align: left;
 }
 
 .addToCartButton {
@@ -50,20 +64,23 @@ body {
     background-color: #7cc2af;
     text-shadow: aquamarine;  
     font-weight: 600;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 .categories a {
     text-decoration: none;
     flex: 1;
-    color: white;
+    color: #333;
     padding: 10px;
-
+    font-weight: 400;
 }
 
-.categories div a:hover {
+
+
+.categories div:hover {
     opacity: 1;
-    border-radius: 10%;
-    background-color: #edac7f;
+    /* border-radius: 10%; */
+    background-color: #7cc2af;
 }
 
 
@@ -89,11 +106,14 @@ body {
 .listOfProducts {
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-start; */
-    justify-self: center;
+    justify-content: center;
+    /* justify-self: center; */
     height: 50%;
     flex: 4;
     flex-wrap: wrap;
+    /* border-right: .5px solid #ccc; */
+    border-left: .5px solid #ccc;
+    /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); */
 }
 p.price {
     margin: auto;
@@ -110,6 +130,8 @@ p.price {
     flex-basis: 23%;
     margin: 3px 3px;
     border-radius: 5px;
+    border: none !important;
+    margin-top: 2rem
 
 }
 
