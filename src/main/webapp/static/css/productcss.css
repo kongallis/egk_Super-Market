@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    background-color: #f7f7f7;
     /* margin-top: .5rem; */
 }
 
@@ -48,13 +49,15 @@ body {
 }
 
 .addToCartButton {
-    /* background-color: aqua; */
+    background-color: #7cc2af;
     flex: 1;
     /* border: 5px; */
     height: 35px;
     border-radius: 8px;
     cursor: pointer;
     padding: 10px 25%;
+    color:white;
+    cursor: pointer;
 }
 
 .navig {
@@ -114,6 +117,7 @@ body {
     /* border-right: .5px solid #ccc; */
     border-left: .5px solid #ccc;
     /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); */
+    
 }
 p.price {
     margin: auto;
@@ -124,15 +128,24 @@ p.price {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 25%;
-    border: 1px solid gainsboro;
+    /* width: 25%; */
+    /* border: 1px solid gainsboro; */
     justify-content: center;
-    flex-basis: 23%;
+    flex-basis: 18%;
     margin: 3px 3px;
-    border-radius: 5px;
-    border: none !important;
-    margin-top: 2rem
+    border-radius: .5rem!important;
+    /* border: none !important; */
+    margin-top: 2rem;
+    margin-left: .8rem;
+    background-color: white;
+    padding-bottom: 1rem;
+    transition: all .2s;
+}
 
+/* box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2) */
+
+.product:hover{
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2)
 }
 
 .product p {

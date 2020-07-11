@@ -7,7 +7,7 @@ function loadProducts() {
     }
     var xhr = new XMLHttpRequest();
     // window.location.origin --> e.g. http://localhost:8084
-var dnsUrl = String(window.location.origin +"/productrest/")
+    var dnsUrl = String(window.location.origin + "/productrest/")
     xhr.open("GET", dnsUrl, true);
 
 
@@ -19,8 +19,8 @@ var dnsUrl = String(window.location.origin +"/productrest/")
                 var productDIV = createEachDOMProduct(productsJSON[i]);
             }
             var anchorsCreated = document.getElementsByClassName(
-                    "add-to-cart-anchor"
-                    );
+                "add-to-cart-anchor"
+            );
             var titles = document.getElementsByClassName("titleOfProduct");
             var prices = document.getElementsByClassName("price");
             for (let z = 0; z < productsJSON.length; z++) {
@@ -38,10 +38,10 @@ var dnsUrl = String(window.location.origin +"/productrest/")
 
 function createEachDOMProduct(product) {
     var productCreated = document.createElement("div");
-    
+
     productCreated.className = "product";
     var measurementType =
-            product.categoryId.categoryName == "Meat" ||
+        product.categoryId.categoryName == "Meat" ||
             product.categoryId.categoryName == "Vegetables" ||
             product.categoryId.categoryName == "Fruit"
             ? "gr"
@@ -63,7 +63,7 @@ function createEachDOMProduct(product) {
       <p class="price"><strong>${product.price}</strong></p>
       <span>€</span>
     </div>
-    <button class="btn btn-primary addToCartButton">
+    <button class="btn addToCartButton">
       ADD TO CART<a data-json=${product} class="add-to-cart-anchor"></a>
     </button>`;
 
@@ -88,18 +88,18 @@ document.getElementById("sortPerPrice").addEventListener("click", function () {
 });
 
 document
-        .getElementById("sortPerPriceAsc")
-        .addEventListener("click", function () {
-            var pricesToSort = document.querySelectorAll(".add-to-cart-anchor");
-            var arrayPricesToSort = Array.from(pricesToSort);
-            arrayPricesToSort.sort(function (a, b) {
-                return a["data-json"].price - b["data-json"].price;
-            });
-            arrayPricesToSort.map(function (element) {
-                var doc = document.querySelector(".listOfProducts");
-                doc.appendChild(element.parentElement.parentElement.parentElement);
-            });
+    .getElementById("sortPerPriceAsc")
+    .addEventListener("click", function () {
+        var pricesToSort = document.querySelectorAll(".add-to-cart-anchor");
+        var arrayPricesToSort = Array.from(pricesToSort);
+        arrayPricesToSort.sort(function (a, b) {
+            return a["data-json"].price - b["data-json"].price;
         });
+        arrayPricesToSort.map(function (element) {
+            var doc = document.querySelector(".listOfProducts");
+            doc.appendChild(element.parentElement.parentElement.parentElement);
+        });
+    });
 
 var bioSign = document.querySelector(".bioSwitch");
 var bioSelected = false;
@@ -150,20 +150,20 @@ function filterBy(filterType) {
         }
     }
     var xhr = new XMLHttpRequest();
-var dnsUrl = String(window.location.origin +"/productrest/")
+    var dnsUrl = String(window.location.origin + "/productrest/")
     xhr.open("GET", dnsUrl, true);
     xhr.onload = function () {
         if (this.status == 200) {
             var productsJSON = JSON.parse(xhr.responseText);
             var fishProductsJSON = productsJSON.filter(
-                    (product) => product.categoryId.categoryName == filterType
+                (product) => product.categoryId.categoryName == filterType
             );
             for (let i = 0; i < fishProductsJSON.length; i++) {
                 var productDIV = createEachDOMProduct(fishProductsJSON[i]);
             }
             var anchorsCreated = document.getElementsByClassName(
-                    "add-to-cart-anchor"
-                    );
+                "add-to-cart-anchor"
+            );
             var titles = document.getElementsByClassName("titleOfProduct");
             var prices = document.getElementsByClassName("price");
             for (let z = 0; z < fishProductsJSON.length; z++) {
@@ -181,15 +181,15 @@ function attachEventListenerToButtons() {
     var minusButtons = document.getElementsByClassName("minusButton");
     var plusButtons = document.getElementsByClassName("plusButton");
     var addToCartButtons = document.getElementsByClassName(
-            "addToCartButton"
-            );
+        "addToCartButton"
+    );
 
     for (let minusButton of minusButtons) {
         minusButton.addEventListener("click", function (event) {
-           
+
             var initialQuantity = parseInt(
-                    event.target.nextSibling.firstChild.value
-                    );
+                event.target.nextSibling.firstChild.value
+            );
             if (initialQuantity != 0) {
                 event.target.nextSibling.firstChild.value -= 1;
             }
@@ -197,18 +197,18 @@ function attachEventListenerToButtons() {
     }
     for (let plusButton of plusButtons) {
         plusButton.addEventListener("click", function () {
-           
+
             var initialQuantity = parseInt(
-                    event.target.previousSibling.firstChild.value
-                    );
+                event.target.previousSibling.firstChild.value
+            );
             event.target.previousSibling.firstChild.value = initialQuantity + 1;
         });
     }
 
     $(".addToCartButton").click(function (event) {
         var thisAnchor = event.target.getElementsByClassName(
-                "add-to-cart-anchor"
-                );
+            "add-to-cart-anchor"
+        );
 
         event.preventDefault();
         var name = thisAnchor[0]["data-json"].name;
