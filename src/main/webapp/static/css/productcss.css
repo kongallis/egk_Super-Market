@@ -57,7 +57,6 @@ body {
     cursor: pointer;
     padding: 10px 25%;
     color:white;
-    cursor: pointer;
 }
 
 .navig {
@@ -115,8 +114,8 @@ body {
     flex: 4;
     flex-wrap: wrap;
     /* border-right: .5px solid #ccc; */
-    border-left: .5px solid #ccc;
-    /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); */
+    /* border-left: .5px solid #ccc; */
+    background-color: #f0eeee;
     
 }
 p.price {
@@ -140,6 +139,7 @@ p.price {
     background-color: white;
     padding-bottom: 1rem;
     transition: all .2s;
+    cursor: pointer;
 }
 
 /* box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2) */
