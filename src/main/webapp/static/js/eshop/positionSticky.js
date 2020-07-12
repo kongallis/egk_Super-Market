@@ -10,7 +10,7 @@ function handler() {
     navBarHeight = $("div.navig").css("height");
     $("div.filterChoices").css("top", navBarHeight);
 
-    // we need the height without the "px"
+    // we need the height without the 'px'
     filterHeight = $("div.filterChoices").height();
     navBarHeight = $("div.navig").height();
     topOffset = filterHeight + navBarHeight;
