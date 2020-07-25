@@ -21,6 +21,12 @@ a. Realtimecommunicationand/or
 b. REST API
 
 7. The application must support an e-payment process that:
-a. Givesaccesstoreadsomerestrictedmateriale.g.e-bookor 
-b. Buysomegoods,e.g.purchaseadigitalobject
+
+a. Gives access to read some restricted material 
+e.g.
+e-bookor 
+
+b. Buy some goods,
+e.g.
+purchase a digital object
 
